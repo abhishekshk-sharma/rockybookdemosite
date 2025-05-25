@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RockyBook</title>
+    <link rel="icon" type="icon/x-image" href="image/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="Jquery.3.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,   900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script>
+        $(document).ready(function () {
+      var $localTime = $('.Time--local');
+      setInterval(function () {
+        var currentDate = new Date();
+        var localTime = ('0' + currentDate.getHours()).slice(-2) + ":"
+          + ('0' + currentDate.getMinutes()).slice(-2) + ":"
+          + ('0' + currentDate.getSeconds()).slice(-2);
+        $localTime.text(localTime);
+      }, 0o0);
+    });
+    </script>   
+
+</head>
+<body>
+
+    <!-- This is Navigation bar -->
+
+<div class="nav">
+        <div class="container">
+            <ul class="menu">
+                <li  >
+                    <a href="#" id="menua">
+                        <img src="image/burger-menu.svg" alt="Menu" class="menuic a1" id="menuimgid" style="width: 37px; cursor:pointer;">
+                    </a>
+                </li>
+                
+                <li class="logoic1">
+                    <a href="index.html">
+                        <img src="image/public.png" alt="Menu" class="logoic a1" id="logoicid" style="width: 133px;height: 36px; cursor:pointer;" class="a1">
+                    </a>
+                </li>
+
+                <li  id="menua1li">
+                    <a href="#" id="menua1">
+                        <img src="image/burger-menu.svg" alt="Menu" class="menuic a1" id="menuimgid" style="width: 37px; cursor:pointer;">
+                    </a>
+                </li>
+
+                <li class="search">
+                    <div class="searchic a1" id="sic" style="cursor:pointer;">
+                        <span >SEARCH ALL GAMES</span>
+                        <i class="bi bi-search searchic1" id="sic2"></i>
+                        <span style="color: #777b8a; font-size: 14px;" >Search Game</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="Time--local a1 ta1" id="timediv"></div>
+                </li>
+            </ul>
+
+            <ul class="b1">
+                <li class="b2"><button class="lg register b3 rb3" style="cursor:pointer;"><b>REGISTER</b></button></li>
+                <li class="b2"><button class="lg b3 lb3" style="cursor:pointer"><b>LOGIN</b></button></li>
+                <li class="b2">
+                    <a href="help.html">
+                        <img src="image/public1.svg" alt="" class="b3 msgb3" style="width: auto; cursor:pointer;">
+                    </a>
+                </li>
+            </ul>    
+        </div>
+    </div>
+
+    
+<!-- Modal1 -->
+
+     <div class="menumodal" >
+        <div class="menuhead" >
+
+            <img src="image/public.png" alt="logo" style="width: 166px;padding: 25px;">
+
+            <img src="image/close-icon.svg" alt="closeicon" class="modalclose">
+
+            <ul class="b4" style=" margin-top: -15px;">
+                <li class="b2" style="margin-right:25px;"><button class="lg register b3 rb3"><b>REGISTER</b></button></li>
+                <li class="b2" ><button class="lg b3 lb3"><b>LOGIN</b></button></li>
+            </ul>
+
+        </div>
+        <div class="bordermodalbottom" style="border-bottom: .1px ridge #fbd245; margin: 80px auto 0px; width: 90%;"></div>
+        <ul class="b5" >
+                <li><div class="spanmodal">
+                    <i class="bi bi-patch-question"></i> &nbsp; &nbsp;
+                    <span class="modallist">Customer Support</span>
+                </div></li>
+                <li>
+                    <i class="bi bi-microsoft"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="modallist">Home</span>
+                </li>
+        </ul>
+        <div class="bordermodalbottom" style="border-bottom: .1px ridge #fbd245; margin: 130px auto 0px; width: 90%;"></div>
+    </div>
+
+    <!-- Modal2 -->
+
+     <div class="menumodal1" >
+        <div class="menuhead1" >
+
+            <img src="image/public.png" alt="logo" style="width: 166px;padding: 25px;">
+
+            <img src="image/close-icon.svg" alt="closeicon" class="modalclose1">
+
+            <ul class="b4" style=" margin-top: -15px;">
+                <li class="b2" style="margin-right:25px;"><button class="lg register b3 rb3"><b>REGISTER</b></button></li>
+                <li class="b2" ><button class="lg b3 lb3"><b>LOGIN</b></button></li>
+            </ul>
+
+        </div>
+        <div class="bordermodalbottom" style="border-bottom: .1px ridge #fbd245; margin: 80px auto 0px; width: 90%;"></div>
+        <ul class="b5" >
+                <li><div class="spanmodal">
+                    <i class="bi bi-patch-question"></i> &nbsp; &nbsp;
+                    <span class="modallist">Customer Support</span>
+                </div></li>
+                <li>
+                    <i class="bi bi-microsoft"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="modallist">Home</span>
+                </li>
+        </ul>
+        <div class="bordermodalbottom" style="border-bottom: .1px ridge #fbd245; margin: 130px auto 0px; width: 90%;"></div>
+    </div>
+
+    <!-- This is a back button -->
+    <div class="backbutton">
+        <div class="bckarrowbtn">
+            <i class="bi bi-arrow-left-short bckarrowbtnicon" onclick="window.history.back();"></i>
+            <div class="bckarrowbtntext">Support</div>
+        </div>
+        <div class="helpclosebutton">
+            <div class="bckcrossbtn">
+                <i class="bi bi-x " onclick="window.history.back();"></i>
+            </div>
+        </div>
+    </div>
+    <!-- back button end -->
+
+    <!-- help slogan -->
+    <div class="helpslogan">
+        <i><p>Need assistance? Get in touch with us via</p></i>
+    </div>
+     <!-- end -->
+
+     <!-- help links -->
+    <div class="helplinks">
+        <ul class="helplinksul">
+            <li class="helplinksli">
+                <img src="image/helplinks/image1.svg" alt="">
+                <div class="hlpsociallink">
+                    <a href="https://api.whatsapp.com/send?phone=919460837178&text=Hy%20rockybook" target="_blank" class="asendmail">
+                        <p>Whatsapp Now</p>
+                    </a>
+                </div>
+            </li>
+            <li class="helplinksli">
+                <img src="image/helplinks/image2.svg" alt="">
+                <div class="hlpsociallink">
+                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsTKzqwHkrjcnrfqfZvqGwmXxJFPVmhZrrMbcZNDqzDzVnLtGlDmXRlVWHmfZDfFkNhhxlvq" target="_blank" class="asendmail">
+                        <p >Email Now</p>
+                    </a>
+                </div>
+                
+            </li>
+        </ul>
+    </div>
+     <!-- end -->
+
+</body>
+</html>
+
+<script>
+
+    $(document).ready(function(){
+        $('#menua').click(function(){
+            $(".menumodal").show(600);
+            $("#menua").hide(600);
+            $(".logoic").hide(600);
+            $(".searchic").hide(600);
+            $("#timediv").hide(600);
+        });
+        $('#menua1').click(function(){
+            $(".menumodal1").show(600);
+            $("#menua1").hide(600);
+            $(".logoic").hide(600);
+            
+        });
+        $(".modalclose").click(function(){
+            $(".menumodal").hide(600);
+            $("#menua").show(600);
+            $(".logoic").show(600);
+            $(".searchic").show(600);
+            $("#timediv").show(600);
+        });
+        $(".modalclose1").click(function(){
+            $(".menumodal1").hide(600);
+            $("#menua1").show(600);
+            $(".logoic").show(600);
+            
+        });
+        $("#next").click(function(){
+            $(".slider").animate({left:"100px"});
+            // $(".slider").fadeOut("fast").fadeIn(1000);
+
+        });
+    });
+</script>

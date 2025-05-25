@@ -1,0 +1,757 @@
+
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-color: rgb(29, 28, 28);
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+
+        }
+        body::-webkit-scrollbar{
+            display: none;
+        }
+
+        /* This is for nav bar */
+
+        .nav{
+            position: fixed;
+            top: 0;
+            display: flex;
+            background-color: black;
+            height: 101px;
+            width: 100%;
+            justify-content: center;
+            z-index: 3;
+
+        }
+        .container{
+            /* background-color: aqua; */
+            width: 100%;
+            /* display: none; */
+            
+          
+        }
+
+        /* This is for nav bar items */
+
+
+        ul {
+            list-style-type: none;
+            margin: 18px auto;
+            padding: 0;
+            /* overflow: hidden; */
+        }
+        li{
+            float: left;
+            margin: 5px;
+            margin-top: 8px;
+        }   
+        li .a1{
+            display: block;
+            padding: 8px;
+            
+        }
+
+        /* This is for  menu logo */
+
+        .menuic{
+            margin-top: 4px;
+            margin-left: 20px;
+            margin-right: -5px;
+        }
+        #menua1{
+            display: none;
+        }
+
+        /* This is for company logo  */
+
+        .logoic{
+            margin-top: -2px;
+            margin-left: -1px;
+        }
+
+        /* This is for search area */
+
+        .searchic{
+            background-color: #1a1a1a;
+            color: white;
+            width: 311px;
+            height: 23px;
+            margin-left: -15px;
+            margin-top: 5px;
+            border-radius: 9px;
+            font-size: 12px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            align-content: space-around;
+            text-align: center;
+            font-weight: 700;
+            
+        }
+        .searchic1{
+            color: #777b8a;
+        }
+
+        .searchic:hover .searchic1{
+            color:white;
+        }
+
+        /* This is for Time */
+
+        .ta1{
+            color: white;
+            margin-top: 7px;
+            font-size: 13px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 200;
+            font-style: normal;
+        }
+
+        /* This is for right side nav items */
+
+        .b1{
+            margin-right: 40px;
+        }
+
+        .b2{
+            float: right;
+            margin: 5px;
+            margin-top: 8px;
+        }   
+        .b3{
+            display: block;
+            padding: 8px;
+            width: 15px;
+            
+        }
+
+        /* This is for fight side buttons button */
+
+        .lg{
+            width: 100%;      
+            height: 41px;    
+            border-radius: 15px; 
+            border-style: none; 
+            color: #fbd245;
+            background-color: #1a1a1a;
+            /* font-weight: bolder; */
+            font-size: 12px;
+
+        }
+
+        /* This is for register button */
+
+        .register{    
+            border:1px solid #fbd245; 
+        }
+        .lg:hover, .register:hover{
+            background-color: #fbd245;
+            color: black;
+            /* font-weight: bolder;s */
+
+        }
+        .rb3{
+            margin-right: 22px; 
+            margin-top: 4px;
+            height: 40px;
+            font-weight: 500;
+        }
+
+        .registerbody{
+            z-index: 1;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            background-color: black;
+            opacity: .90;
+            width: 100%;
+            height: auto;
+            margin-top: -30px;
+        }
+        .registermain{
+            z-index: 2;
+            background-color: rgb(27, 27, 27);
+            opacity: 1;
+            position: relative;
+            margin-top: 2px;
+            margin-bottom: 40px;
+            width: 30vw;
+            height: 100vh;
+            border-radius: 15px;
+            border: 1px solid #777b8a;
+            overflow: hidden;
+            
+        }
+        .registerimg1{
+            width: 100%;
+        }
+
+        .registerdtls{
+            display: flex;
+            justify-content: center;
+            color: white;
+        }
+        .registerdtls > p{
+            font-size: 1.2vw;
+            margin-top: 2px;
+            font-weight: 400;
+        }
+        .registerform{
+            width: 100%;
+            
+        }
+
+        /* end */
+
+        /* This is for login button */
+
+        .lb3{
+            margin-right: 28px;
+            margin-top: 4px;
+            height: 40px;
+            
+        }
+
+        /* This is for message icon */
+
+        .msgb3{
+            margin-right: -12px;
+            margin-top: -4px;
+        }
+
+        /* This is for resopnsiveness */
+
+        @media only screen and (max-width: 963px){
+            .b1{
+                display:none;
+            }
+        }
+        @media only screen and (max-width: 650px){
+            #timediv{
+                display:none;
+            }
+        }
+        @media only screen and (max-width: 570px){
+            .search{
+                display:none;
+            }
+            #timediv{
+                display: block;
+
+            }
+        }
+        @media only screen and (max-width: 320px){
+            #timediv{
+                display: none;
+
+            }
+            
+        }
+        @media only screen and (max-width: 227px){
+            .logoic1{
+                float: left;
+            }
+            #menua{
+                display: none;
+            }
+            #menua1{
+                width: 100%;
+                background-color: #1a1a1a;
+                display: block;
+                margin-top: 20px;
+            }
+            #menua1li{
+                margin-left: 0px;
+                width: 100%;
+                height: 70px;
+                background-color: #1a1a1a;
+            }
+            
+        }
+
+        /* This is for right side logo button modal. */
+
+        .menumodal{
+            position: fixed ;
+            top: 0;
+            left: 0;
+            background-color: #1a1a1a;
+            width: 500px;
+            height: 100%;
+            margin-top: 0px;
+            z-index: 4;
+            border-radius: 30px;
+            display: none;
+        }
+        .menumodal1{
+            position: fixed ;
+            top: 0;
+            left: 0;
+            background-color: #1a1a1a;
+            width: 500px;
+            height: 100%;
+            margin-top: 0px;
+            z-index: 4;
+            border-radius: 30px;
+            display: none;
+        }
+        .b5{
+            display: block;
+            
+        }
+        .b5 li{
+            width: 100%;
+            margin-top: 20px;
+            margin-left: 50px;
+            color: #777b8a;
+        }
+        .b5 li:hover{
+            color: #fbd245;
+            cursor: pointer;
+        }
+        .modalclose{
+           
+            color:#be2734; 
+            float:right;
+            margin-top: 15px;
+            margin-right:15px;
+            cursor: pointer;
+        }
+        .modalclose1{
+           
+            color:#be2734; 
+            float:right;
+            margin-top: 15px;
+            margin-right:15px;
+            cursor: pointer;
+        }
+
+/* This is for announcement */
+    .announcement1{
+        
+        margin-top: 105px;
+    }
+   
+/* end */
+
+/* This is for home slider  Banner*/
+
+.homeslider{
+    display: flex;    
+}
+
+.hsliderimg{
+    
+    overflow: hidden;
+    position: relative;  
+    width: 100%;
+    height: 78vh;
+    margin-left: 40px;
+    right: 8px;
+    top: 0px;
+   
+}
+.himages1{
+    transition: opacity 1.5s ease-in-out;   
+    width: 98%;
+    height: 100%;
+    position: absolute;
+    transition: 1s; 
+    opacity: 0;
+}
+.active {
+    opacity: 1;
+}
+
+/* end */
+
+/* This is for home banner navigation buttons */
+
+.bannerbutton{
+    display: flex;
+    justify-content: center;
+    border-style: none; 
+    width: 100%;
+    height: auto;
+}
+.homebannerbtn{
+    position: relative;
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: white; 
+    width: 12px; 
+    height: 7px; 
+    border-style: none; 
+    border-radius: 15px;
+    
+}
+
+.homebannerbtnActive{
+    background-color: #fbd245;
+}
+
+/* end */
+
+/* This is for Img GIF */
+.imgGif{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    border-style: none; 
+    width: 100%;
+    height: auto;
+    margin-top: 60px;
+}
+.imgGif > img{
+    width: 15%;
+    border-radius: 15px;
+
+}
+
+/* end */
+
+/* This is for more product slider */
+
+.slider {
+    display: flex;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+    
+    
+}
+
+.slider img {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 15.6%; /* Adjust as needed */
+    height: 5%; /* Adjust as needed */
+    margin-top: 30px;
+    margin-left: 15px;
+    transition: 1s ;
+}
+
+.slidebar{
+    position: relative;
+    width: auto;
+    height: auto;
+    top: -30px;
+    margin-bottom: -30px;
+}
+
+.slideheading1{
+   
+    color: white;
+    font-size: 1.9vw;
+    margin-top: 30px;
+    /* margin-bottom:-5px; */
+    padding: 20px;
+    
+}
+.slideheading1 > span{
+    position: relative;
+    top: 20px;
+}
+.slidearrow{
+    color: white;
+    width: 30px;
+    height: 10px;
+}
+
+.arrowrighth2{
+    position: relative;
+    font-size: 2.5vw;
+    bottom: 0px;
+    margin-top: 5px;
+    
+}
+ /* arrow button  */
+.arrownextbtn{
+    color: #fbd245;
+    float:right;
+    margin-top: -45px;
+    margin-right: 45px;
+    box-sizing: border-box;
+    
+}
+.arrowprevbtn{
+    color: #fbd245;
+    float:right;
+    margin-top: -45px;
+    margin-right: 125px;
+}
+.arrownextbtn:hover, .arrowprevbtn:hover{
+    color:white;
+}
+/* end */
+
+/* This is for providers section */
+.providers{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+}
+
+.providerheading{
+    color: white;
+    font-size: 2.5vw;
+    margin-top: -40px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.providerlogo{
+
+    display: flex;
+    float: left;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    justify-content: space-around;
+   
+}
+.providerlogo > img{
+    margin-top: 20px;
+    width: 4%;
+    border: 1px solid #fbd245;
+    padding: 10px 120px;
+    cursor: pointer;
+    /* margin: 20px auto; */
+
+}
+
+/* end */
+
+/* This is for footer  */
+
+.lastimg{
+    position: relative;
+        width: 100%;
+        margin-top: 140px;
+}
+
+.lastimg > img{
+    width: 95%;
+    margin-left: 35px;
+}
+
+.socialLinks{
+    position: relative;
+    width: 100%;
+    margin-top: -10px;
+    
+}
+
+.companylogo > img{
+    display: inline;
+    float: left;
+    margin-left: 40px;
+    width: 15%;
+}
+
+
+
+.slinksul {
+
+    position: relative;
+    list-style-type: none;
+    margin-right: 40px;
+}
+
+.slinksli {
+    float: right;
+
+}
+
+.slinksli > img{
+    width: 2vw;
+    cursor: pointer;
+}
+
+.footerhr{
+    
+    position: relative;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #323333 ;
+
+}
+/* end */
+
+/* Footer content starts */
+
+.footercontent{
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.footercontentul{
+    display: flex;
+    list-style-type: none;
+}
+
+.footercontentli{
+    color: gray;
+    float: left;
+    margin-left: 40px;
+    font-size: 1vw;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.footercontentli:hover{
+    color: #fbd245;
+    cursor: pointer;
+}
+
+.policydescription{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: gray;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.policydescription > p{
+    font-size: 0.75vw;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* end */
+
+/* From here help icon section starts */
+
+/* This is for backbutton */
+.backbutton{
+    /* z-index: 2; */
+    position: inline;
+    display: flex;  
+    margin-top: 102px;
+    
+    
+}
+.bckarrowbtn{
+    position: relative;
+    display: flex;    
+    margin-left: 30px;
+    font-size: 3vw;
+    font-weight: 200;
+    color: #777b8a;
+    /* margin-top: 20px; */
+    
+}
+
+.bckarrowbtnicon{
+    float: left;
+    height: 100%;
+    margin-left: -10px;
+    margin-top: 3px;
+    cursor: pointer;    
+}
+
+.bckarrowbtntext{
+    float: left;
+    font-size: 40%;
+    color: white;
+    height: 100%;
+    margin-top: 1vw;
+    margin-left: 0px;
+}
+
+.helpclosebutton{
+    position: relative;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+.bckcrossbtn{
+    display: flex;   
+    color: #777b8a;
+    margin-right: 30px;
+    font-size: 3vw;
+    margin-top: 3px;
+    cursor: pointer;    
+}
+
+/* end */
+
+/* This is help slogan */
+.helpslogan{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    color: #9ea2ad;
+}
+
+/* end */
+
+/* This is help links */
+.helplinks{
+    width: 100%;
+}
+.helplinksul{
+    list-style-type: none;
+    display: block;
+    width: 100%;
+    margin-top: -10px;
+}
+.helplinksli{
+    display: flex;
+    width: 95%;
+    border-bottom:0.5px solid rgb(82, 80, 80);
+    border-radius: 25px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.helplinksli >img{
+    width: 3.5vw;
+    padding-left: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.hlpsociallink{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95vw;
+    font-weight: 500;
+    color: black;
+    text-decoration: underline;
+    width: 10vw;
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+
+    background-color: #e2b933;
+}
+.hlpsociallink:hover {
+    cursor: pointer;
+    color: white;
+    box-shadow: 1px 1px 20px 2px #fbd245, -1px -1px 20px 1px #fbd245;   
+}
+
+.asendmail{
+    text-decoration: none;
+    color: black;
+}
+.asendmail:hover{
+    color:white;
+}
+/* end */
