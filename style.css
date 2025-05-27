@@ -10,9 +10,14 @@
             font-style: normal;
 
         }
+        body.modal-active{
+            overflow: hidden;
+        }
         body::-webkit-scrollbar{
             display: none;
         }
+
+        
 
         /* This is for nav bar */
 
@@ -162,32 +167,47 @@
         }
 
         .registerbody{
+            overflow: auto;            
             z-index: 1;
-            position: absolute;
+            position: fixed;
+            top: 130px;
             display: flex;
             justify-content: center;
-            background-color: black;
-            opacity: .90;
+            background-color: rgba(0, 0, 0, 0.85);           
             width: 100%;
-            height: auto;
+            height:88vh;
             margin-top: -30px;
         }
-        .registermain{
+        .registermain{ 
+            
             z-index: 2;
             background-color: rgb(27, 27, 27);
-            opacity: 1;
             position: relative;
             margin-top: 2px;
             margin-bottom: 40px;
             width: 30vw;
-            height: 100vh;
+            height: 125vh;
             border-radius: 15px;
             border: 1px solid #777b8a;
-            overflow: hidden;
             
+        }
+       
+        .registerbody::-webkit-scrollbar{
+            display: none;
         }
         .registerimg1{
             width: 100%;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+        .rgstercls{
+            display: flex;
+            position: absolute;
+            
+            right:4%;
+            top: 2%;
+            color: white;
+            
         }
 
         .registerdtls{
@@ -202,8 +222,183 @@
         }
         .registerform{
             width: 100%;
+            margin-top: 30px;
+            height: auto;
+        }
+        .rgstrform1{
+
+            color: white;
+            font-size: small;
+            font-weight: 200;
+        }
+        .rgstrform1 > input{
+            width: 80%;
+            height: 6vh;
+            margin: 6px;
+            margin-left: 8%;
+            border-radius: 7px;
+            border-style: none;
+            padding-left: 8px;
+
+        }
+        .rgstrform1 >label{
+            margin-left:8%;
+            margin-bottom: -2px;
+        }
+        .rgstrinfo{
+            display: flex;
+            align-items: center;
+            margin-left: 8.5%;
+            margin-bottom: 20px;
+            color: rgb(201, 199, 199);
+            width: 80%;
+            padding-left: 10px;
+            height: 6vh;
+            border-radius: 6px;
+            background-color:rgb(0, 0, 0);
+        }
+
+        #rgstrsubmt{
+            background-color: #bd9820;
+            width: 60%;
+            height: 8vh;
+            margin-left: 6vw;
+            margin-top: 20px;
+        }
+        #rgstrsubmt:hover{
+            box-shadow: 2px 2px 15px #bd9820, -2px -2px 15px 5px #bd9820;
+        }
+        .rgstrdesc{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 8px;
+            color: #777b8a;
+            font-size: smaller;
+        }
+        .rgstrtandc{
+            text-decoration: none;
+            color: blue;
+        }
+        .rgsterlgin{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 20px;
+            color: white;
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 80px;
+        }
+        .rgsterlgin > p > a{
+            
+            color: blue;
+        }
+
+        /* login form */
+        .loginbody{
+            display: flex;
+            z-index: 1;
+            justify-content: center;
+            position: fixed;
+            top: 100px;
+            background-color: black;
+            background-color: rgba(0, 0, 0, 0.85);
+            height: 95vh;
+            width: 100%;
+            overflow: auto;
+            /* z-index: 2; */
+        }
+        .loginbody::-webkit-scrollbar{
+            display: none;
+        }
+        .loginmain{
+            position: relative;
+            background-color: rgb(28, 28, 29);
+            z-index: 2;
+            /* opacity: 1; */
+            width: 30vw;
+            margin-top: 1%;
+            height: 90vh;
+            border: 1px solid #777b8a;
+            border-radius: 15px;
+            margin-bottom: 20vh;
+            /* overflow: auto; */
+        }
+        .loginimg1{
+            z-index: 3;
+            opacity: 1;
+            width: 100%;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
             
         }
+        .logindtls{
+            display: flex;
+            justify-content: center;
+            color: white;
+        }
+        .loginform{
+            width: 100%;
+            position: relative;
+            margin-top: 20px;
+            color: white;
+            font-size: small;
+            font-weight: 200;
+            
+        }
+        .loginform1 > input{
+            border-style: none;
+            width: 80%;
+            margin-left: 8%;
+            margin-top: 1%;
+            margin-bottom: 8%;
+            height: 6.5vh;
+            border-radius: 10px;
+            padding-left: 3%;
+        }
+        .loginform1 > label{
+            margin-left: 8%;
+        }
+        .lginforgotpsswrd{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1%;
+        }
+        .lginforgotpsswrd>p>a{
+            color: rgb(0, 17, 255);
+        }
+        #loginsubmt{
+            width: 60%;
+            margin-left: 19%;
+            height: 8.5vh;
+            background-color: #dfb42a;
+        }
+        .logindesc{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: -2%;
+
+        }
+        .loginotp{
+            /* margin-left: 37%; */
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .lginrgstr{
+            display: flex;
+            justify-content: center;
+            margin-top: 5%;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .lginrgstr > p > a{
+            color: blue;
+        }
+        /* login form end */
 
         /* end */
 
@@ -349,7 +544,7 @@
     overflow: hidden;
     position: relative;  
     width: 100%;
-    height: 78vh;
+    height: 40vw;
     margin-left: 40px;
     right: 8px;
     top: 0px;
@@ -383,8 +578,8 @@
     margin-top: 20px;
     margin-left: 20px;
     background-color: white; 
-    width: 12px; 
-    height: 7px; 
+    width: 0.6vw; 
+    height: 0.4vw; 
     border-style: none; 
     border-radius: 15px;
     
@@ -408,7 +603,12 @@
 }
 .imgGif > img{
     width: 15%;
+    
+}
+.gifclass{
+    border-style: 5px solid;
     border-radius: 15px;
+    border-color: #323333 #fbd245 #1a1a1a #fbd245;
 
 }
 
@@ -521,7 +721,7 @@
     margin-top: 20px;
     width: 4%;
     border: 1px solid #fbd245;
-    padding: 10px 120px;
+    padding: 1vw 8vw;
     cursor: pointer;
     /* margin: 20px auto; */
 
