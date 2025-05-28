@@ -639,33 +639,32 @@
     // This is for slide 1
 
     $(document).ready(function () {
+
         let visibleImages = 6;  // Number of images visible at once
+        let totalImages = $(".slideimg").length;
+        let index = 0; // Start from the first set
         let mediaquery = window.matchMedia("(max-width: 600px)");
-        mediaquery.addEventListener("change", function(e){
-            if(e.matches){
+        
+        function checkmediaquery(){
+            if(mediaquery.matches){
                 visibleImages = 3;
                 // console.log(visibleImages);
-                updateSlide();
             }
             else{
                 visibleImages = 6;
-                updateSlide();
             }
-        });
-        let smediaq = window.matchMedia("(max-width: 234px)");
-        smediaq.addEventListener("change", function(a){
-            if(a.matches){
-            visibleImages=2;
             updateSlide();
         }
-            else{
+        checkmediaquery();   
+        mediaquery.addEventListener("change", function(q){
+             if(mediaquery.matches){
                 visibleImages = 3;
-                updateSlide
+                // console.log(visibleImages);
             }
-        });
-        
-        let totalImages = $(".slideimg").length;
-        let index = 0; // Start from the first set
+            else{
+                visibleImages = 6;
+            }
+        });     
         
         function updateSlide() {
             let slideWidth = $(".slideimg").outerWidth(true) * visibleImages;
@@ -677,6 +676,7 @@
             else{
                 $("#next").css("color", "#999792");
             }
+
              if (index > 0) {
                  $("#prev").css("color", "#fbd245");
             }
@@ -702,28 +702,37 @@
         });
 
         updateSlide();
+        
     });
 
     // This is for slide 2
 
     $(document).ready(function () {
-        
          let visibleImages = 6;  // Number of images visible at once
+        let totalImages = $(".slideimg1").length;
+        let index = 0; // Start from the first set
         let mediaquery = window.matchMedia("(max-width: 600px)");
-        mediaquery.addEventListener("change", function(e){
-            if(e.matches){
+        
+        function checkmediaquery(){
+            if(mediaquery.matches){
                 visibleImages = 3;
                 // console.log(visibleImages);
-                updateSlide();
             }
             else{
                 visibleImages = 6;
-                updateSlide();
             }
-        });
-
-        let totalImages = $(".slideimg1").length;
-        let index = 0; // Start from the first set
+            updateSlide();
+        }
+        checkmediaquery();   
+        mediaquery.addEventListener("change", function(q){
+             if(mediaquery.matches){
+                visibleImages = 3;
+                // console.log(visibleImages);
+            }
+            else{
+                visibleImages = 6;
+            }
+        });  
 
         function updateSlide() {
             let slideWidth = $(".slideimg1").outerWidth(true) * visibleImages;
@@ -763,22 +772,32 @@
     // This is for slide 3
 
     $(document).ready(function () {
-       let visibleImages = 6;  // Number of images visible at once
+       
+         let visibleImages = 6;  // Number of images visible at once
+        let totalImages = $(".slideimg2").length;
+        let index = 0; // Start from the first set
         let mediaquery = window.matchMedia("(max-width: 600px)");
-        mediaquery.addEventListener("change", function(e){
-            if(e.matches){
+        
+        function checkmediaquery(){
+            if(mediaquery.matches){
                 visibleImages = 3;
                 // console.log(visibleImages);
-                updateSlide();
             }
             else{
                 visibleImages = 6;
-                updateSlide();
             }
-        });
-
-        let totalImages = $(".slideimg2").length;
-        let index = 0; // Start from the first set
+            updateSlide();
+        }
+        checkmediaquery();   
+        mediaquery.addEventListener("change", function(q){
+             if(mediaquery.matches){
+                visibleImages = 3;
+                // console.log(visibleImages);
+            }
+            else{
+                visibleImages = 6;
+            }
+        });  
 
         function updateSlide() {
             let slideWidth = $(".slideimg2").outerWidth(true) * visibleImages;
@@ -818,22 +837,32 @@
     // This is for slide 4
 
     $(document).ready(function () {
-        let visibleImages = 6;  // Number of images visible at once
+        
+         let visibleImages = 6;  // Number of images visible at once
+        let totalImages = $(".slideimg3").length;
+        let index = 0; // Start from the first set
         let mediaquery = window.matchMedia("(max-width: 600px)");
-        mediaquery.addEventListener("change", function(e){
-            if(e.matches){
+        
+        function checkmediaquery(){
+            if(mediaquery.matches){
                 visibleImages = 3;
                 // console.log(visibleImages);
-                updateSlide();
             }
             else{
                 visibleImages = 6;
-                updateSlide();
             }
-        });
-
-        let totalImages = $(".slideimg3").length;
-        let index = 0; // Start from the first set
+            updateSlide();
+        }
+        checkmediaquery();   
+        mediaquery.addEventListener("change", function(q){
+             if(mediaquery.matches){
+                visibleImages = 3;
+                // console.log(visibleImages);
+            }
+            else{
+                visibleImages = 6;
+            }
+        });  
 
         function updateSlide() {
             let slideWidth = $(".slideimg3").outerWidth(true) * visibleImages;
@@ -873,22 +902,32 @@
     // This is for slide 5
 
     $(document).ready(function () {
-       let visibleImages = 6;  // Number of images visible at once
+      
+         let visibleImages = 6;  // Number of images visible at once
+        let totalImages = $(".slideimg4").length;
+        let index = 0; // Start from the first set
         let mediaquery = window.matchMedia("(max-width: 600px)");
-        mediaquery.addEventListener("change", function(e){
-            if(e.matches){
+        
+        function checkmediaquery(){
+            if(mediaquery.matches){
                 visibleImages = 3;
                 // console.log(visibleImages);
-                updateSlide();
             }
             else{
                 visibleImages = 6;
-                updateSlide();
             }
-        });
-
-        let totalImages = $(".slideimg4").length;
-        let index = 0; // Start from the first set
+            updateSlide();
+        }
+        checkmediaquery();   
+        mediaquery.addEventListener("change", function(q){
+             if(mediaquery.matches){
+                visibleImages = 3;
+                // console.log(visibleImages);
+            }
+            else{
+                visibleImages = 6;
+            }
+        });  
 
         function updateSlide() {
             let slideWidth = $(".slideimg4").outerWidth(true) * visibleImages;
@@ -928,22 +967,32 @@
     // This is for slide 6
 
     $(document).ready(function () {
-       let visibleImages = 6;  // Number of images visible at once
+       
+         let visibleImages = 6;  // Number of images visible at once
+        let totalImages = $(".slideimg5").length;
+        let index = 0; // Start from the first set
         let mediaquery = window.matchMedia("(max-width: 600px)");
-        mediaquery.addEventListener("change", function(e){
-            if(e.matches){
+        
+        function checkmediaquery(){
+            if(mediaquery.matches){
                 visibleImages = 3;
                 // console.log(visibleImages);
-                updateSlide();
             }
             else{
                 visibleImages = 6;
-                updateSlide();
             }
-        });
-
-        let totalImages = $(".slideimg5").length;
-        let index = 0; // Start from the first set
+            updateSlide();
+        }
+        checkmediaquery();   
+        mediaquery.addEventListener("change", function(q){
+             if(mediaquery.matches){
+                visibleImages = 3;
+                // console.log(visibleImages);
+            }
+            else{
+                visibleImages = 6;
+            }
+        });  
 
         function updateSlide() {
             let slideWidth = $(".slideimg5").outerWidth(true) * visibleImages;
@@ -983,22 +1032,32 @@
     // This is for slide 7
 
     $(document).ready(function () {
-        let visibleImages = 6;  // Number of images visible at once
+        
+         let visibleImages = 6;  // Number of images visible at once
+        let totalImages = $(".slideimg6").length;
+        let index = 0; // Start from the first set
         let mediaquery = window.matchMedia("(max-width: 600px)");
-        mediaquery.addEventListener("change", function(e){
-            if(e.matches){
+        
+        function checkmediaquery(){
+            if(mediaquery.matches){
                 visibleImages = 3;
                 // console.log(visibleImages);
-                updateSlide();
             }
             else{
                 visibleImages = 6;
-                updateSlide();
             }
-        });
-
-        let totalImages = $(".slideimg6").length;
-        let index = 0; // Start from the first set
+            updateSlide();
+        }
+        checkmediaquery();   
+        mediaquery.addEventListener("change", function(q){
+             if(mediaquery.matches){
+                visibleImages = 3;
+                // console.log(visibleImages);
+            }
+            else{
+                visibleImages = 6;
+            }
+        });  
 
         function updateSlide() {
             let slideWidth = $(".slideimg6").outerWidth(true) * visibleImages;

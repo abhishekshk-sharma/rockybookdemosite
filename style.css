@@ -975,8 +975,24 @@
     transition: 1s ;
 }
 
+ .arrowrighth2{
+    position: relative;
+    font-size: 5vw;
+    bottom: 0px;
+    margin-top: -5vw;
+    
+    }
+    .arrowrightprev{
+        margin-right: 10vw;
+    }
+
     .slideheading1{
         font-size: 3vw;
+        
+    }
+    .slideheading{
+        position: relative;
+        margin-bottom: 180vw;
     }
 }
 @media only screen and (max-width: 333px){
@@ -995,9 +1011,9 @@
 
     .arrowrighth2{
     position: relative;
-    font-size: 4vw;
+    font-size: 8vw;
     bottom: 0px;
-    margin-top: 5px;
+    margin-top: -5vw;
     }
     .slideheading1{
         font-size: 5vw;
