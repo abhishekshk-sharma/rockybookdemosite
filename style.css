@@ -517,6 +517,25 @@
         .registerbody{
             margin-top: 40vw;
         }
+        .registermain{
+            height: 250px;
+        }
+        .loginmain{
+            height: 205vw;
+        }
+        .lginrgstr > p > a{
+            font-size: 6.5vw;
+            color: powderblue;
+        }
+        .rgsterlgin > p > a{
+            
+            color: powderblue;
+            font-size: 6.2vw;
+        }
+        #loginsubmt{
+            width: 80%;
+            margin-left: 8%;
+        }
         
     }
 
