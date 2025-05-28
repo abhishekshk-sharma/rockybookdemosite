@@ -75,6 +75,85 @@
         </div>
     </div>
 
+    <!-- register -->
+ <div class="registerbody" style="display: none;">
+    <div class="registermain">
+        <div class="registerimg">
+            <img src="/image/register/register.jpeg" alt="" class="registerimg1">
+            <i class="bi bi-x-lg rgstercls"></i>
+        </div>
+        <div class="registerdtls">
+            <p>Register now to play</p>
+            
+        </div>
+        <div class="registerform">
+            <form action="#" class="rgstrform1">
+                <label for="username">Username</label><br>
+                <input type="text" placeholder="Enter your username">
+                <div class="rgstrinfo">
+                    <p>Must be between 5 to 25 charecters with no spaces.</p>
+                </div>
+                <label for="rgstrpassword">Password</label>
+                <input type="password" placeholder="Password" class="rgstrpassword">
+                <div class="rgstrinfo">
+                    <p>Must be between 8 to 20 charecters with no spaces.</p>
+                </div>
+                <label for="rgstrcode">Code</label>
+                <label for="rgstrmobile" style="margin-left: 18%;">Mobile</label><br>
+                <input type="text" placeholder="+91"  style="width: 4vw;">
+                
+                <input type="text" placeholder="Mobile" class="rgstrmobile" style="width: 15vw; margin-bottom: 20px;">
+                <label for="rgstremail">Email</label>
+                <input type="email" placeholder="Enter you E-mail">
+                <input type="submit" value="Send Code" id="rgstrsubmt">
+                <div class="rgstrdesc">
+                    <p>By clicking on `send code`,you accepting <a href="#" class="rgstrtandc lb3">Terms & Conditions</a></p>
+                </div>
+                <div class="rgsterlgin">
+                    <p>Have an Account? <a href="#" class="loginmodal">Log in</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+ </div>
+
+<!-- register end -->
+
+<!-- login -->
+ <div class="loginbody" style="display: none;">
+    <div class="loginmain">
+        <div class="registerimg">
+            <img src="/image/register/login.jpeg" alt="" class="loginimg1">
+            <i class="bi bi-x-lg rgstercls logincls"></i>
+        </div>
+        <div class="logindtls">
+            <p>Login now to play</p>
+        </div>
+        <div class="loginform">
+            <form action="#" class="loginform1">
+                <label for="username">Username</label><br>
+                <input type="text" placeholder="Enter your username">
+    
+                <label for="loginpassword">Password</label>
+                <input type="password" placeholder="Password" class="loginpassword">
+                <div class="lginforgotpsswrd">
+                    <p>Forgot Password? <a href="#">Reset</a></p>
+                </div>
+                
+                <input type="submit" value="Login With Username" id="loginsubmt">
+                <div class="logindesc">
+                    <p><a href="#" class="loginotp">Login With OTP</a></p>
+                </div>
+                <div class="lginrgstr">
+                    <p>Don't Have an Account? <a href="#" class="registermodal">Register now</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+ </div>
+
+<!-- login end -->
+
     
 <!-- Modal1 -->
 
@@ -86,8 +165,8 @@
             <img src="image/close-icon.svg" alt="closeicon" class="modalclose">
 
             <ul class="b4" style=" margin-top: -15px;">
-                <li class="b2" style="margin-right:25px;"><button class="lg register b3 rb3"><b>REGISTER</b></button></li>
-                <li class="b2" ><button class="lg b3 lb3"><b>LOGIN</b></button></li>
+                <li class="b2" style="margin-right:25px;"><button class="lg register b3 rb3 registermodal"><b>REGISTER</b></button></li>
+                <li class="b2" ><button class="lg b3 lb3 loginmodal"><b>LOGIN</b></button></li>
             </ul>
 
         </div>
@@ -95,11 +174,15 @@
         <ul class="b5" >
                 <li><div class="spanmodal">
                     <i class="bi bi-patch-question"></i> &nbsp; &nbsp;
-                    <span class="modallist">Customer Support</span>
+                    <span class="modallist">
+                        <a href="help.html" class="modalhelpa">Customer Support</a>
+                    </span>
                 </div></li>
                 <li>
                     <i class="bi bi-microsoft"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span class="modallist">Home</span>
+                    <span class="modallist">
+                        <a href="index.html" class="modalhelpa">Home</a>
+                    </span>
                 </li>
         </ul>
         <div class="bordermodalbottom" style="border-bottom: .1px ridge #fbd245; margin: 130px auto 0px; width: 90%;"></div>
@@ -115,8 +198,8 @@
             <img src="image/close-icon.svg" alt="closeicon" class="modalclose1">
 
             <ul class="b4" style=" margin-top: -15px;">
-                <li class="b2" style="margin-right:25px;"><button class="lg register b3 rb3"><b>REGISTER</b></button></li>
-                <li class="b2" ><button class="lg b3 lb3"><b>LOGIN</b></button></li>
+                <li class="b2" style="margin-right:25px;"><button class="lg register b3 rb3 registermodal"><b>REGISTER</b></button></li>
+                <li class="b2" ><button class="lg b3 lb3 loginmodal"><b>LOGIN</b></button></li>
             </ul>
 
         </div>
@@ -150,7 +233,7 @@
 
     <!-- help slogan -->
     <div class="helpslogan">
-        <i><p>Need assistance? Get in touch with us via</p></i>
+        <p>Need assistance? Get in touch with us via</p>
     </div>
      <!-- end -->
 
@@ -214,6 +297,40 @@
             $(".slider").animate({left:"100px"});
             // $(".slider").fadeOut("fast").fadeIn(1000);
 
+        });
+
+        
+        $(".registermodal").click(function(){
+            $(".registerbody").fadeIn(400);
+            $("body").addClass("modal-active");
+            $(".menumodal").fadeOut(400);
+            $(".loginbody").fadeOut(400);
+            $("#menua").show(600);
+            $(".logoic").show(600);
+            $(".searchic").show(600);
+            $("#timediv").show(600);
+        });
+        $(".rgstercls").click(function(){
+            $(".registerbody").fadeOut(400);
+            $("body").removeClass("modal-active")
+            
+        });
+
+        // login form
+        $(".loginmodal").click(function(){
+            $(".loginbody").fadeIn(600);
+            $("body").addClass("modal-active");
+            $(".menumodal").fadeOut(400);
+            $(".registerbody").fadeOut(400);
+            $("#menua").show(600);
+            $(".logoic").show(600);
+            $(".searchic").show(600);
+            $("#timediv").show(600);
+        });
+        $(".logincls").click(function(){
+            $(".loginbody").fadeOut(400);
+            $("body").removeClass("modal-active")
+            
         });
     });
 </script>

@@ -65,8 +65,8 @@
             </ul>
 
             <ul class="b1">
-                <li class="b2"><button class="lg register b3 rb3" style="cursor:pointer;"><b>REGISTER</b></button></li>
-                <li class="b2"><button class="lg b3 lb3" style="cursor:pointer"><b>LOGIN</b></button></li>
+                <li class="b2"><button class="lg register b3 rb3 registermodal" style="cursor:pointer;"><b>REGISTER</b></button></li>
+                <li class="b2"><button class="lg b3 lb3 loginmodal" style="cursor:pointer"><b>LOGIN</b></button></li>
                 <li class="b2">
                     <a href="help.html">
                         <img src="image/public1.svg" alt="" class="b3 msgb3" style="width: auto; cursor:pointer;">
@@ -91,26 +91,39 @@
     <div class="registermain">
         <div class="registerimg">
             <img src="/image/register/register.jpeg" alt="" class="registerimg1">
+            <i class="bi bi-x-lg rgstercls"></i>
         </div>
         <div class="registerdtls">
             <p>Register now to play</p>
             
         </div>
         <div class="registerform">
-            <form action="#">
+            <form action="#" class="rgstrform1">
                 <label for="username">Username</label><br>
                 <input type="text" placeholder="Enter your username">
-                <span>Must be between 5 to 25 characters with no spaces.</span>
+                <div class="rgstrinfo">
+                    <p>Must be between 5 to 25 charecters with no spaces.</p>
+                </div>
                 <label for="rgstrpassword">Password</label>
                 <input type="password" placeholder="Password" class="rgstrpassword">
-                <span>Must be between 8 to 20 characters with no spaces.</span>
-                <label for="rgstrcode"></label>
-                <input type="number" placeholder="+91" value="rgstrcode">
-                <label for="rgstrmobile">Mobile</label>
-                <input type="number" placeholder="Mobile" class="rgstrmobile">
+                <div class="rgstrinfo">
+                    <p>Must be between 8 to 20 charecters with no spaces.</p>
+                </div>
+                <label for="rgstrcode">Code</label>
+                <label for="rgstrmobile" style="margin-left: 18%;">Mobile</label><br>
+
+                <input type="text" placeholder="+91" id="rgstrcode">                
+                <input type="text" placeholder="Mobile" id="rgstrmobile" >
+
                 <label for="rgstremail">Email</label>
                 <input type="email" placeholder="Enter you E-mail">
-                <input type="submit" value="Send Code">
+                <input type="submit" value="Send Code" id="rgstrsubmt">
+                <div class="rgstrdesc">
+                    <p>By clicking on `send code`,you accepting <a href="#" class="rgstrtandc lb3">Terms & Conditions</a></p>
+                </div>
+                <div class="rgsterlgin">
+                    <p>Have an Account? <a href="#" class="loginmodal">Log in</a></p>
+                </div>
             </form>
         </div>
     </div>
@@ -118,18 +131,53 @@
 
 <!-- register end -->
 
+<!-- login -->
+ <div class="loginbody" style="display: none;">
+    <div class="loginmain">
+        <div class="registerimg">
+            <img src="/image/register/login.jpeg" alt="" class="loginimg1">
+            <i class="bi bi-x-lg rgstercls logincls"></i>
+        </div>
+        <div class="logindtls">
+            <p>Login now to play</p>
+        </div>
+        <div class="loginform">
+            <form action="#" class="loginform1">
+                <label for="username">Username</label><br>
+                <input type="text" placeholder="Enter your username">
+    
+                <label for="loginpassword">Password</label>
+                <input type="password" placeholder="Password" class="loginpassword">
+                <div class="lginforgotpsswrd">
+                    <p>Forgot Password? <a href="#">Reset</a></p>
+                </div>
+                
+                <input type="submit" value="Login With Username" id="loginsubmt">
+                <div class="logindesc">
+                    <p><a href="#" class="loginotp">Login With OTP</a></p>
+                </div>
+                <div class="lginrgstr">
+                    <p>Don't Have an Account? <a href="#" class="registermodal">Register now</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+ </div>
+
+<!-- login end -->
+
 <!-- Modal1 -->
 
      <div class="menumodal" >
         <div class="menuhead" >
 
-            <img src="image/public.png" alt="logo" style="width: 166px;padding: 25px;">
+            <img src="image/public.png" alt="logo"  class="modallogo">
 
             <img src="image/close-icon.svg" alt="closeicon" class="modalclose">
 
             <ul class="b4" style=" margin-top: -15px;">
-                <li class="b2" style="margin-right:25px;"><button class="lg register b3 rb3"><b>REGISTER</b></button></li>
-                <li class="b2" ><button class="lg b3 lb3"><b>LOGIN</b></button></li>
+                <li class="b2" style="margin-right:25px;"><button class="lg register b3 rb3 registermodal"><b>REGISTER</b></button></li>
+                <li class="b2" ><button class="lg b3 lb3 loginmodal"><b>LOGIN</b></button></li>
             </ul>
 
         </div>
@@ -137,11 +185,15 @@
         <ul class="b5" >
                 <li><div class="spanmodal">
                     <i class="bi bi-patch-question"></i> &nbsp; &nbsp;
-                    <span class="modallist">Customer Support</span>
+                    <span class="modallist">
+                        <a href="help.html" class="modalhelpa">Customer Support</a>
+                    </span>
                 </div></li>
                 <li>
                     <i class="bi bi-microsoft"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span class="modallist">Home</span>
+                    <span class="modallist">
+                        <a href="index.html" class="modalhelpa">Home</a>
+                    </span>
                 </li>
         </ul>
         <div class="bordermodalbottom" style="border-bottom: .1px ridge #fbd245; margin: 130px auto 0px; width: 90%;"></div>
@@ -152,13 +204,13 @@
      <div class="menumodal1" >
         <div class="menuhead1" >
 
-            <img src="image/public.png" alt="logo" style="width: 166px;padding: 25px;">
+            <img src="image/public.png" alt="logo" class="modallogo2">
 
             <img src="image/close-icon.svg" alt="closeicon" class="modalclose1">
 
             <ul class="b4" style=" margin-top: -15px;">
-                <li class="b2" style="margin-right:25px;"><button class="lg register b3 rb3"><b>REGISTER</b></button></li>
-                <li class="b2" ><button class="lg b3 lb3"><b>LOGIN</b></button></li>
+                <li class="b2" style="margin-right:25px;"><button class="lg register b3 rb3 registermodal"><b>REGISTER</b></button></li>
+                <li class="b2" ><button class="lg b3 lb3 loginmodal"><b>LOGIN</b></button></li>
             </ul>
 
         </div>
@@ -234,11 +286,11 @@
 
     <div class="imgGif">
 
-        <img src="image/gif/gif1.gif" alt="">
-        <img src="image/gif/gif2.gif" alt="">
-        <img src="image/gif/gif3.gif" alt="">
-        <img src="image/gif/gif4.gif" alt="">
-        <img src="image/gif/gif5.gif" alt="">
+        <img src="image/gif/gif1.gif" alt="" class="gifclass">
+        <img src="image/gif/gif2.gif" alt="" class="gifclass">
+        <img src="image/gif/gif3.gif" alt="" class="gifclass">
+        <img src="image/gif/gif4.gif" alt="" class="gifclass">
+        <img src="image/gif/gif5.gif" alt="" class="gifclass">
         
     </div>
 
@@ -260,23 +312,23 @@
     
 
         <div class="slider">
-            <img src="image/topgames/image1.png" alt="" class="slideimg">
-            <img src="image/topgames/image2.png" alt="" class="slideimg">
-            <img src="image/topgames/image3.png" alt="" class="slideimg">
-            <img src="image/topgames/image4.png" alt="" class="slideimg">
-            <img src="image/topgames/image5.jfif" alt="" class="slideimg">
-            <img src="image/topgames/image6.jfif" alt="" class="slideimg">
-            <img src="image/topgames/image7.jfif" alt="" class="slideimg">
-            <img src="image/topgames/image8.jfif" alt="" class="slideimg">
-            <img src="image/topgames/image9.png" alt="" class="slideimg">
-            <img src="image/topgames/image10.png" alt="" class="slideimg">
-            <img src="image/topgames/image11.png" alt="" class="slideimg">
-            <img src="image/topgames/image12.png" alt="" class="slideimg">
-            <img src="image/topgames/image13.jfif" alt="" class="slideimg">
-            <img src="image/topgames/image14.jfif" alt="" class="slideimg">
-            <img src="image/topgames/image15.jfif" alt="" class="slideimg">
-            <img src="image/topgames/image16.jfif" alt="" class="slideimg">
-            <img src="image/topgames/image17.jfif" alt="" class="slideimg">
+            <img src="/image/topgames/image1.png" alt="" class="slideimg">
+            <img src="/image/topgames/image2.png" alt="" class="slideimg">
+            <img src="/image/topgames/image3.png" alt="" class="slideimg">
+            <img src="/image/topgames/image4.png" alt="" class="slideimg">
+            <img src="/image/topgames/image5.jfif" alt="" class="slideimg">
+            <img src="/image/topgames/image6.jfif" alt="" class="slideimg">
+            <img src="/image/topgames/image7.jfif" alt="" class="slideimg">
+            <img src="/image/topgames/image8.jfif" alt="" class="slideimg">
+            <img src="/image/topgames/image9.png" alt="" class="slideimg">
+            <img src="/image/topgames/image10.png" alt="" class="slideimg">
+            <img src="/image/topgames/image11.png" alt="" class="slideimg">
+            <img src="/image/topgames/image12.png" alt="" class="slideimg">
+            <img src="/image/topgames/image13.jfif" alt="" class="slideimg">
+            <img src="/image/topgames/image14.jfif" alt="" class="slideimg">
+            <img src="/image/topgames/image15.jfif" alt="" class="slideimg">
+            <img src="/image/topgames/image16.jfif" alt="" class="slideimg">
+            <img src="/image/topgames/image17.jfif" alt="" class="slideimg">
         </div>
     </div>
 
@@ -298,53 +350,53 @@
     
 
         <div class="slider" >
-            <img src="image/livecasino/image1.jfif" alt="" class="slideimg1">
-            <img src="image/livecasino/image2.jfif" alt="" class="slideimg1">
-            <img src="image/livecasino/image3.jfif" alt="" class="slideimg1">
-            <img src="image/livecasino/image4.jfif" alt="" class="slideimg1">
-            <img src="image/livecasino/image5.jfif" alt="" class="slideimg1">
-            <img src="image/livecasino/image6.jfif" alt="" class="slideimg1">
-            <img src="image/livecasino/image7.jfif" alt="" class="slideimg1">
-            <img src="image/livecasino/image8.jfif" alt="" class="slideimg1">
-            <img src="image/livecasino/image9.jfif" alt="" class="slideimg1">
-            <img src="image/livecasino/image10.jfif" alt="" class="slideimg1">
-            <img src="image/livecasino/image11.jfif" alt="" class="slideimg1">
-            <img src="image/livecasino/image12.jfif" alt="" class="slideimg1">
-            <img src="image/livecasino/image13.jfif" alt="" class="slideimg1">
-            <img src="image/livecasino/image14.jfif" alt="" class="slideimg1">
-            <img src="image/livecasino/image15.jfif" alt="" class="slideimg1">
-            <img src="image/livecasino/image16.jfif" alt="" class="slideimg1">
-            <img src="image/livecasino/image17.jfif" alt="" class="slideimg1">
-            <img src="image/livecasino/image18.jfif" alt="" class="slideimg1">
-            <img src="image/livecasino/image19.jfif" alt="" class="slideimg1">
-            <img src="image/livecasino/image20.jfif" alt="" class="slideimg1">
-            <img src="image/livecasino/image21.jfif" alt="" class="slideimg1">
-            <img src="image/livecasino/image22.jfif" alt="" class="slideimg1">
-            <img src="image/livecasino/image23.jfif" alt="" class="slideimg1">
-            <img src="image/livecasino/image24.jfif" alt="" class="slideimg1">
-            <img src="image/livecasino/image25.jfif" alt="" class="slideimg1">
-            <img src="image/livecasino/image26.jpeg" alt="" class="slideimg1">
-            <img src="image/livecasino/image27.jpeg" alt="" class="slideimg1">
-            <img src="image/livecasino/image28.jpeg" alt="" class="slideimg1">
-            <img src="image/livecasino/image29.jpeg" alt="" class="slideimg1">
-            <img src="image/livecasino/image30.jpeg" alt="" class="slideimg1">
-            <img src="image/livecasino/image31.jpeg" alt="" class="slideimg1">
-            <img src="image/livecasino/image32.jpeg" alt="" class="slideimg1">
-            <img src="image/livecasino/image33.jpeg" alt="" class="slideimg1">
-            <img src="image/livecasino/image33.jpeg" alt="" class="slideimg1">
-            <img src="image/livecasino/image34.jpeg" alt="" class="slideimg1">
-            <img src="image/livecasino/image35.jpeg" alt="" class="slideimg1">
-            <img src="image/livecasino/image36.jpeg" alt="" class="slideimg1">
-            <img src="image/livecasino/image37.jpeg" alt="" class="slideimg1">
-            <img src="image/livecasino/image38.jpeg" alt="" class="slideimg1">
-            <img src="image/livecasino/image39.jpeg" alt="" class="slideimg1">
-            <img src="image/livecasino/image40.jpeg" alt="" class="slideimg1">
-            <img src="image/livecasino/image41.jpeg" alt="" class="slideimg1">
-            <img src="image/livecasino/image42.jpeg" alt="" class="slideimg1">
-            <img src="image/livecasino/image43.jpeg" alt="" class="slideimg1">
-            <img src="image/livecasino/image44.jpeg" alt="" class="slideimg1">
-            <img src="image/livecasino/image45.jpeg" alt="" class="slideimg1">
-            <img src="image/livecasino/image46.jpeg" alt="" class="slideimg1">
+            <img src="/image/livecasino/image1.jfif" alt="" class="slideimg1">
+            <img src="/image/livecasino/image2.jfif" alt="" class="slideimg1">
+            <img src="/image/livecasino/image3.jfif" alt="" class="slideimg1">
+            <img src="/image/livecasino/image4.jfif" alt="" class="slideimg1">
+            <img src="/image/livecasino/image5.jfif" alt="" class="slideimg1">
+            <img src="/image/livecasino/image6.jfif" alt="" class="slideimg1">
+            <img src="/image/livecasino/image7.jfif" alt="" class="slideimg1">
+            <img src="/image/livecasino/image8.jfif" alt="" class="slideimg1">
+            <img src="/image/livecasino/image9.jfif" alt="" class="slideimg1">
+            <img src="/image/livecasino/image10.jfif" alt="" class="slideimg1">
+            <img src="/image/livecasino/image11.jfif" alt="" class="slideimg1">
+            <img src="/image/livecasino/image12.jfif" alt="" class="slideimg1">
+            <img src="/image/livecasino/image13.jfif" alt="" class="slideimg1">
+            <img src="/image/livecasino/image14.jfif" alt="" class="slideimg1">
+            <img src="/image/livecasino/image15.jfif" alt="" class="slideimg1">
+            <img src="/image/livecasino/image16.jfif" alt="" class="slideimg1">
+            <img src="/image/livecasino/image17.jfif" alt="" class="slideimg1">
+            <img src="/image/livecasino/image18.jfif" alt="" class="slideimg1">
+            <img src="/image/livecasino/image19.jfif" alt="" class="slideimg1">
+            <img src="/image/livecasino/image20.jfif" alt="" class="slideimg1">
+            <img src="/image/livecasino/image21.jfif" alt="" class="slideimg1">
+            <img src="/image/livecasino/image22.jfif" alt="" class="slideimg1">
+            <img src="/image/livecasino/image23.jfif" alt="" class="slideimg1">
+            <img src="/image/livecasino/image24.jfif" alt="" class="slideimg1">
+            <img src="/image/livecasino/image25.jfif" alt="" class="slideimg1">
+            <img src="/image/livecasino/image26.jpeg" alt="" class="slideimg1">
+            <img src="/image/livecasino/image27.jpeg" alt="" class="slideimg1">
+            <img src="/image/livecasino/image28.jpeg" alt="" class="slideimg1">
+            <img src="/image/livecasino/image29.jpeg" alt="" class="slideimg1">
+            <img src="/image/livecasino/image30.jpeg" alt="" class="slideimg1">
+            <img src="/image/livecasino/image31.jpeg" alt="" class="slideimg1">
+            <img src="/image/livecasino/image32.jpeg" alt="" class="slideimg1">
+            <img src="/image/livecasino/image33.jpeg" alt="" class="slideimg1">
+            <img src="/image/livecasino/image33.jpeg" alt="" class="slideimg1">
+            <img src="/image/livecasino/image34.jpeg" alt="" class="slideimg1">
+            <img src="/image/livecasino/image35.jpeg" alt="" class="slideimg1">
+            <img src="/image/livecasino/image36.jpeg" alt="" class="slideimg1">
+            <img src="/image/livecasino/image37.jpeg" alt="" class="slideimg1">
+            <img src="/image/livecasino/image38.jpeg" alt="" class="slideimg1">
+            <img src="/image/livecasino/image39.jpeg" alt="" class="slideimg1">
+            <img src="/image/livecasino/image40.jpeg" alt="" class="slideimg1">
+            <img src="/image/livecasino/image41.jpeg" alt="" class="slideimg1">
+            <img src="/image/livecasino/image42.jpeg" alt="" class="slideimg1">
+            <img src="/image/livecasino/image43.jpeg" alt="" class="slideimg1">
+            <img src="/image/livecasino/image44.jpeg" alt="" class="slideimg1">
+            <img src="/image/livecasino/image45.jpeg" alt="" class="slideimg1">
+            <img src="/image/livecasino/image46.jpeg" alt="" class="slideimg1">
         </div>
     </div>
 
@@ -366,27 +418,27 @@
     
 
         <div class="slider">
-            <img src="image/bonusgames/image1.png" alt="" class="slideimg2">
-            <img src="image/bonusgames/image2.png" alt="" class="slideimg2">
-            <img src="image/bonusgames/image3.png" alt="" class="slideimg2">
-            <img src="image/bonusgames/image4.png" alt="" class="slideimg2">
-            <img src="image/bonusgames/image5.png" alt="" class="slideimg2">
-            <img src="image/bonusgames/image6.png" alt="" class="slideimg2">
-            <img src="image/bonusgames/image7.png" alt="" class="slideimg2">
-            <img src="image/bonusgames/image8.png" alt="" class="slideimg2">
-            <img src="image/bonusgames/image9.png" alt="" class="slideimg2">
-            <img src="image/bonusgames/image10.png" alt="" class="slideimg2">
-            <img src="image/bonusgames/image11.png" alt="" class="slideimg2">
-            <img src="image/bonusgames/image12.png" alt="" class="slideimg2">
-            <img src="image/bonusgames/image13.png" alt="" class="slideimg2">
-            <img src="image/bonusgames/image14.png" alt="" class="slideimg2">
-            <img src="image/bonusgames/image15.png" alt="" class="slideimg2">
-            <img src="image/bonusgames/image16.png" alt="" class="slideimg2">
-            <img src="image/bonusgames/image17.png" alt="" class="slideimg2">
-            <img src="image/bonusgames/image18.png" alt="" class="slideimg2">
-            <img src="image/bonusgames/image19.png" alt="" class="slideimg2">
-            <img src="image/bonusgames/image20.png" alt="" class="slideimg2">
-            <img src="image/bonusgames/image21.jpeg" alt="" class="slideimg2">
+            <img src="/image/bonusgames/image1.png" alt="" class="slideimg2">
+            <img src="/image/bonusgames/image2.png" alt="" class="slideimg2">
+            <img src="/image/bonusgames/image3.png" alt="" class="slideimg2">
+            <img src="/image/bonusgames/image4.png" alt="" class="slideimg2">
+            <img src="/image/bonusgames/image5.png" alt="" class="slideimg2">
+            <img src="/image/bonusgames/image6.png" alt="" class="slideimg2">
+            <img src="/image/bonusgames/image7.png" alt="" class="slideimg2">
+            <img src="/image/bonusgames/image8.png" alt="" class="slideimg2">
+            <img src="/image/bonusgames/image9.png" alt="" class="slideimg2">
+            <img src="/image/bonusgames/image10.png" alt="" class="slideimg2">
+            <img src="/image/bonusgames/image11.png" alt="" class="slideimg2">
+            <img src="/image/bonusgames/image12.png" alt="" class="slideimg2">
+            <img src="/image/bonusgames/image13.png" alt="" class="slideimg2">
+            <img src="/image/bonusgames/image14.png" alt="" class="slideimg2">
+            <img src="/image/bonusgames/image15.png" alt="" class="slideimg2">
+            <img src="/image/bonusgames/image16.png" alt="" class="slideimg2">
+            <img src="/image/bonusgames/image17.png" alt="" class="slideimg2">
+            <img src="/image/bonusgames/image18.png" alt="" class="slideimg2">
+            <img src="/image/bonusgames/image19.png" alt="" class="slideimg2">
+            <img src="/image/bonusgames/image20.png" alt="" class="slideimg2">
+            <img src="/image/bonusgames/image21.jpeg" alt="" class="slideimg2">
         </div>
     </div>
 
@@ -408,13 +460,13 @@
     
 
         <div class="slider">
-            <img src="image/fastgames/image1.jpeg" alt="" class="slideimg3">
-            <img src="image/fastgames/image2.png" alt="" class="slideimg3">
-            <img src="image/fastgames/image3.png" alt="" class="slideimg3">
-            <img src="image/fastgames/image4.png" alt="" class="slideimg3">
-            <img src="image/fastgames/image5.png" alt="" class="slideimg3">
-            <img src="image/fastgames/image6.png" alt="" class="slideimg3">
-            <img src="image/fastgames/image7.png" alt="" class="slideimg3">
+            <img src="/image/fastgames/image1.jpeg" alt="" class="slideimg3">
+            <img src="/image/fastgames/image2.png" alt="" class="slideimg3">
+            <img src="/image/fastgames/image3.png" alt="" class="slideimg3">
+            <img src="/image/fastgames/image4.png" alt="" class="slideimg3">
+            <img src="/image/fastgames/image5.png" alt="" class="slideimg3">
+            <img src="/image/fastgames/image6.png" alt="" class="slideimg3">
+            <img src="/image/fastgames/image7.png" alt="" class="slideimg3">
             
         </div>
     </div>
@@ -437,17 +489,17 @@
     
 
         <div class="slider">
-            <img src="image/slot/image1.png" alt="" class="slideimg4">
-            <img src="image/slot/image2.png" alt="" class="slideimg4">
-            <img src="image/slot/image3.png" alt="" class="slideimg4">
-            <img src="image/slot/image4.png" alt="" class="slideimg4">
-            <img src="image/slot/image5.png" alt="" class="slideimg4">
-            <img src="image/slot/image6.png" alt="" class="slideimg4">
-            <img src="image/slot/image7.png" alt="" class="slideimg4">
-            <img src="image/slot/image8.jpeg" alt="" class="slideimg4">
-            <img src="image/slot/image9.jpeg" alt="" class="slideimg4">
-            <img src="image/slot/image10.jpeg" alt="" class="slideimg4">
-            <img src="image/slot/image11.jpeg" alt="" class="slideimg4">
+            <img src="/image/slot/image1.png" alt="" class="slideimg4">
+            <img src="/image/slot/image2.png" alt="" class="slideimg4">
+            <img src="/image/slot/image3.png" alt="" class="slideimg4">
+            <img src="/image/slot/image4.png" alt="" class="slideimg4">
+            <img src="/image/slot/image5.png" alt="" class="slideimg4">
+            <img src="/image/slot/image6.png" alt="" class="slideimg4">
+            <img src="/image/slot/image7.png" alt="" class="slideimg4">
+            <img src="/image/slot/image8.jpeg" alt="" class="slideimg4">
+            <img src="/image/slot/image9.jpeg" alt="" class="slideimg4">
+            <img src="/image/slot/image10.jpeg" alt="" class="slideimg4">
+            <img src="/image/slot/image11.jpeg" alt="" class="slideimg4">
        
         </div>
     </div>
@@ -470,11 +522,11 @@
     
 
         <div class="slider">
-            <img src="image/lottery/image1.png" alt="" class="slideimg5">
-            <img src="image/lottery/image2.png" alt="" class="slideimg5">
-            <img src="image/lottery/image3.png" alt="" class="slideimg5">
-            <img src="image/lottery/image4.png" alt="" class="slideimg5">
-            <img src="image/lottery/image5.png" alt="" class="slideimg5">
+            <img src="/image/lottery/image1.png" alt="" class="slideimg5">
+            <img src="/image/lottery/image2.png" alt="" class="slideimg5">
+            <img src="/image/lottery/image3.png" alt="" class="slideimg5">
+            <img src="/image/lottery/image4.png" alt="" class="slideimg5">
+            <img src="/image/lottery/image5.png" alt="" class="slideimg5">
  
         </div>
     </div>
@@ -497,16 +549,16 @@
     
 
         <div class="slider">
-            <img src="image/arcadegames/image1.png" alt="" class="slideimg6">
-            <img src="image/arcadegames/image2.png" alt="" class="slideimg6">
-            <img src="image/arcadegames/image3.png" alt="" class="slideimg6">
-            <img src="image/arcadegames/image4.png" alt="" class="slideimg6">
-            <img src="image/arcadegames/image5.png" alt="" class="slideimg6">
-            <img src="image/arcadegames/image6.png" alt="" class="slideimg6">
-            <img src="image/arcadegames/image7.png" alt="" class="slideimg6">
-            <img src="image/arcadegames/image8.png" alt="" class="slideimg6">
-            <img src="image/arcadegames/image9.png" alt="" class="slideimg6">
-            <img src="image/arcadegames/image10.png" alt="" class="slideimg6">
+            <img src="/image/arcadegames/image1.png" alt="" class="slideimg6">
+            <img src="/image/arcadegames/image2.png" alt="" class="slideimg6">
+            <img src="/image/arcadegames/image3.png" alt="" class="slideimg6">
+            <img src="/image/arcadegames/image4.png" alt="" class="slideimg6">
+            <img src="/image/arcadegames/image5.png" alt="" class="slideimg6">
+            <img src="/image/arcadegames/image6.png" alt="" class="slideimg6">
+            <img src="/image/arcadegames/image7.png" alt="" class="slideimg6">
+            <img src="/image/arcadegames/image8.png" alt="" class="slideimg6">
+            <img src="/image/arcadegames/image9.png" alt="" class="slideimg6">
+            <img src="/image/arcadegames/image10.png" alt="" class="slideimg6">
         </div>
     </div>
 
@@ -516,17 +568,17 @@
         </div>
         <div class="providerlogo">
                 
-                <img src="image/provider/provider1.svg" alt="">
-                <img src="image/provider/provider2.svg" alt="">
-                <img src="image/provider/provider3.svg" alt="">
-                <img src="image/provider/provider4.png" alt="">
+                <img src="/image/provider/provider1.svg" alt="">
+                <img src="/image/provider/provider2.svg" alt="">
+                <img src="/image/provider/provider3.svg" alt="">
+                <img src="/image/provider/provider4.png" alt="">
         </div>
     </div>
 
     <!-- From here foter part starts  -->
 
     <div class="lastimg">
-        <img src="image/footer/image1.avif" alt="">
+        <img src="/image/footer/image1.avif" alt="">
     </div>
 
     <!-- This is company logo and social media links -->
@@ -534,33 +586,33 @@
     <div class="socialLinks">
 
         <div class="companylogo">
-            <img src="image/footer/image2.png" alt="">
+            <img src="/image/footer/image2.png" alt="">
         </div>
 
         <div class="slinks">
             <ul class="slinksul">
                 <li class="slinksli">
-                    <img src="image/footer/whatsapplogo.svg" alt="">
+                    <img src="/image/footer/whatsapplogo.svg" alt="">
                 </li>
 
                 <li class="slinksli">
-                    <img src="image/footer/telegramlogo.svg" alt="">
+                    <img src="/image/footer/telegramlogo.svg" alt="">
                 </li>
 
                 <li class="slinksli">
-                    <img src="image/footer/youtubelogo.svg" alt="">
+                    <img src="/image/footer/youtubelogo.svg" alt="">
                 </li>
 
                 <li class="slinksli">
-                    <img src="image/footer/xlogo.svg" alt="">
+                    <img src="/image/footer/xlogo.svg" alt="">
                 </li>
 
                 <li class="slinksli">
-                    <img src="image/footer/facebooklogo.svg" alt="">            
+                    <img src="/image/footer/facebooklogo.svg" alt="">            
                 </li>
 
                 <li class="slinksli" >
-                    <img src="image/footer/instalogo.svg" alt="" >
+                    <img src="/image/footer/instalogo.svg" alt="" >
                 </li>
             </ul>
         </div>
@@ -588,12 +640,37 @@
 
     $(document).ready(function () {
         let visibleImages = 6;  // Number of images visible at once
+        let mediaquery = window.matchMedia("(max-width: 600px)");
+        mediaquery.addEventListener("change", function(e){
+            if(e.matches){
+                visibleImages = 3;
+                // console.log(visibleImages);
+                updateSlide();
+            }
+            else{
+                visibleImages = 6;
+                updateSlide();
+            }
+        });
+        let smediaq = window.matchMedia("(max-width: 234px)");
+        smediaq.addEventListener("change", function(a){
+            if(a.matches){
+            visibleImages=2;
+            updateSlide();
+        }
+            else{
+                visibleImages = 3;
+                updateSlide
+            }
+        });
+        
         let totalImages = $(".slideimg").length;
         let index = 0; // Start from the first set
-
+        
         function updateSlide() {
             let slideWidth = $(".slideimg").outerWidth(true) * visibleImages;
-            $(".slideimg").css("transform", `translateX(-${index * slideWidth}px)`);
+            console.log("in updateslide function"+visibleImages);
+            $(".slideimg").css("transform", `translateX(-${index * (slideWidth)}px)`);
             if (index < Math.ceil(totalImages / visibleImages) - 1) {
                 $("#next").css("color", "#fbd245");
             }
@@ -630,7 +707,21 @@
     // This is for slide 2
 
     $(document).ready(function () {
-        let visibleImages = 6;  // Number of images visible at once
+        
+         let visibleImages = 6;  // Number of images visible at once
+        let mediaquery = window.matchMedia("(max-width: 600px)");
+        mediaquery.addEventListener("change", function(e){
+            if(e.matches){
+                visibleImages = 3;
+                // console.log(visibleImages);
+                updateSlide();
+            }
+            else{
+                visibleImages = 6;
+                updateSlide();
+            }
+        });
+
         let totalImages = $(".slideimg1").length;
         let index = 0; // Start from the first set
 
@@ -672,7 +763,20 @@
     // This is for slide 3
 
     $(document).ready(function () {
-        let visibleImages = 6;  // Number of images visible at once
+       let visibleImages = 6;  // Number of images visible at once
+        let mediaquery = window.matchMedia("(max-width: 600px)");
+        mediaquery.addEventListener("change", function(e){
+            if(e.matches){
+                visibleImages = 3;
+                // console.log(visibleImages);
+                updateSlide();
+            }
+            else{
+                visibleImages = 6;
+                updateSlide();
+            }
+        });
+
         let totalImages = $(".slideimg2").length;
         let index = 0; // Start from the first set
 
@@ -715,6 +819,19 @@
 
     $(document).ready(function () {
         let visibleImages = 6;  // Number of images visible at once
+        let mediaquery = window.matchMedia("(max-width: 600px)");
+        mediaquery.addEventListener("change", function(e){
+            if(e.matches){
+                visibleImages = 3;
+                // console.log(visibleImages);
+                updateSlide();
+            }
+            else{
+                visibleImages = 6;
+                updateSlide();
+            }
+        });
+
         let totalImages = $(".slideimg3").length;
         let index = 0; // Start from the first set
 
@@ -756,7 +873,20 @@
     // This is for slide 5
 
     $(document).ready(function () {
-        let visibleImages = 6;  // Number of images visible at once
+       let visibleImages = 6;  // Number of images visible at once
+        let mediaquery = window.matchMedia("(max-width: 600px)");
+        mediaquery.addEventListener("change", function(e){
+            if(e.matches){
+                visibleImages = 3;
+                // console.log(visibleImages);
+                updateSlide();
+            }
+            else{
+                visibleImages = 6;
+                updateSlide();
+            }
+        });
+
         let totalImages = $(".slideimg4").length;
         let index = 0; // Start from the first set
 
@@ -798,7 +928,20 @@
     // This is for slide 6
 
     $(document).ready(function () {
-        let visibleImages = 6;  // Number of images visible at once
+       let visibleImages = 6;  // Number of images visible at once
+        let mediaquery = window.matchMedia("(max-width: 600px)");
+        mediaquery.addEventListener("change", function(e){
+            if(e.matches){
+                visibleImages = 3;
+                // console.log(visibleImages);
+                updateSlide();
+            }
+            else{
+                visibleImages = 6;
+                updateSlide();
+            }
+        });
+
         let totalImages = $(".slideimg5").length;
         let index = 0; // Start from the first set
 
@@ -841,6 +984,19 @@
 
     $(document).ready(function () {
         let visibleImages = 6;  // Number of images visible at once
+        let mediaquery = window.matchMedia("(max-width: 600px)");
+        mediaquery.addEventListener("change", function(e){
+            if(e.matches){
+                visibleImages = 3;
+                // console.log(visibleImages);
+                updateSlide();
+            }
+            else{
+                visibleImages = 6;
+                updateSlide();
+            }
+        });
+
         let totalImages = $(".slideimg6").length;
         let index = 0; // Start from the first set
 
@@ -881,7 +1037,6 @@
 
 
  </script>
-
     
 </body>
 </html>
@@ -905,7 +1060,9 @@
             $("#menua").show(600);
             $(".logoic").show(600);
             $(".searchic").show(600);
-            $("#timediv").show(600);
+            if(window.matchMedia("(min-width:324px)") == true){
+                $("#timediv").show(600);
+            }
         });
         $(".modalclose1").click(function(){
             $(".menumodal1").hide(600);
@@ -918,7 +1075,62 @@
             // $(".slider").fadeOut("fast").fadeIn(1000);
             
         });
+        
+        $(".registermodal").click(function(){
+            $(".registerbody").fadeIn(400);
+            $("body").addClass("modal-active");
+            $(".menumodal").fadeOut(400);
+            $(".menumodal1").fadeOut(400);
+            $(".loginbody").fadeOut(400);
+            // $("#menua").show(600);
+            $(".logoic").show(600);
+            $(".searchic").show(600);
+            if(window.matchMedia("(min-width:324px)") == true){
+                $("#timediv").show(600);
+            }
+            if(window.matchMedia("(min-width: 237px)").matches){
+                $("#menua").show(600);
+            }
+            // if(window.matchMedia("(max:width: 235px)").matches){
+            //     $("#menua1").show(600);
+            // }
+        });
+        $(".rgstercls").click(function(){
+            $(".registerbody").fadeOut(400);
+            $("body").removeClass("modal-active");
+            if(window.matchMedia("(max-width: 236px)").matches){
+                $("#menua1").show(600);
+            }
+        });
 
+        // login form
+        $(".loginmodal").click(function(){
+            $(".loginbody").fadeIn(600);
+            $("body").addClass("modal-active");
+            $(".menumodal").fadeOut(400);
+            $(".menumodal1").fadeOut(400);
+            $(".registerbody").fadeOut(400);
+            
+            $(".logoic").show(600);
+            $(".searchic").show(600);
+            if(window.matchMedia("(min-width:324px)") == true){
+                $("#timediv").show(600);
+            }
+            if(window.matchMedia("(min-width: 237px)").matches){
+                $("#menua").show(600);
+            }
+            // if(window.matchMedia("(max:width: 235px)").matches){
+            //     $("#menua1").show(600);
+            // }
+        });
+        $(".logincls").click(function(){
+            $(".loginbody").fadeOut(400);
+            $("body").removeClass("modal-active");
+            if(window.matchMedia("(max-width: 236px)").matches){
+                $("#menua1").show(600);
+            }
+            
+        });
 
       // Set interval for seamless transitions
         setInterval(doImageSlideshow, 5000); // Change image every 3 seconds
